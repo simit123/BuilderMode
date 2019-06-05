@@ -4,15 +4,16 @@
  * @describe
  */
 
+/**
+ * 创建者
+ */
 class Director {
 
-    public Human createHuman(IBuildHuman iBuildHuman){
-
-        iBuildHuman.buildHead();
-        iBuildHuman.buildBody();
-        iBuildHuman.buildFoot();
-        iBuildHuman.buildHand();
-        return iBuildHuman.createHuman();
-
+    public Human createHuman(IBuildHuman iBuildHuman) {
+        return iBuildHuman.buildHead()
+                .buildBody()
+                .buildFoot()
+                .buildHand()
+                .createHuman();
     }
 }

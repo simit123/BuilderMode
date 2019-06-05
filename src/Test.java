@@ -18,6 +18,14 @@ class Test {
     public static void main(String[] args) {
         Director director = new Director();
         Human human = director.createHuman(new SmartHuman());
+
+        Computer computer = new Computer.Builder().setHost("local")
+                .setKeyboard("三星")
+                .setMouse("雷蛇")
+                .build();
+
+        System.out.println(computer.getKeyboard());
+
         System.out.println(human.getHand());
     }
 }

@@ -4,28 +4,35 @@
  * @describe
  */
 
+/**
+ * 具体对象
+ */
 class SmartHuman implements IBuildHuman {
 
     Human human = new Human();
 
     @Override
-    public void buildHead() {
+    public IBuildHuman buildHead() {
         human.setHead("大头");
+        return this;
     }
 
     @Override
-    public void buildBody() {
+    public IBuildHuman buildBody() {
         human.setBody("强壮的身体");
+        return this;
     }
 
     @Override
-    public void buildHand() {
+    public IBuildHuman buildHand() {
         human.setHand("大手");
+        return this;
     }
 
     @Override
-    public void buildFoot() {
+    public IBuildHuman buildFoot() {
         human.setFoot("大脚");
+        return this;
     }
 
     @Override
