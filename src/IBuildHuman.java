@@ -4,6 +4,7 @@
  * @describe
  *
  * 定义一个对象创建所需要的过程
+ * 抽象的build
  */
 
 interface IBuildHuman {

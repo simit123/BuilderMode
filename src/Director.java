@@ -9,7 +9,13 @@
  */
 class Director {
 
-    public Human createHuman(IBuildHuman iBuildHuman) {
+    private IBuildHuman iBuildHuman;
+
+    public Director(IBuildHuman iBuildHuman) {
+        this.iBuildHuman = iBuildHuman;
+    }
+
+    public Human createHuman() {
         return iBuildHuman.buildHead()
                 .buildBody()
                 .buildFoot()

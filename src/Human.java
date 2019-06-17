@@ -2,16 +2,17 @@
  * @author by wuYang
  * @date 2019/1/18
  * @describe
+ * 抽象的产品
  */
 
-class Human {
+abstract class Human {
     public Human() {
     }
 
     private String head;
     private String body;
     private String hand;
-    private String foot;
+    public String foot;
 
     public String getHead() {
         return head;
@@ -37,11 +38,8 @@ class Human {
         this.hand = hand;
     }
 
-    public String getFoot() {
-        return foot;
-    }
 
-    public void setFoot(String foot) {
-        this.foot = foot;
-    }
+    public abstract void setFoot();
+
+
 }
